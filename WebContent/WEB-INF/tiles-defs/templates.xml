@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions> 
+	<!-- Default Main Template -->
+	<definition name=".mainTemplate" template="/WEB-INF/jsp/templates/main.jsp">
+		<put-attribute name="title" value="Simple Tiles 2 Example"
+			type="string" />
+		<put-attribute name="header" value="/WEB-INF/jsp/templates/header.jsp" />
+		<put-attribute name="leftmenu"
+			value="/WEB-INF/jsp/templates/leftmenu.jsp" />
+			<put-attribute name="rightmenu" 
+			value="/WEB-INF/jsp/templates/right.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/templates/footer.jsp" />
+	</definition>
+	 
+	<definition name="main" extends=".mainTemplate">
+
+	</definition>
+	
+	<!-- Roamly User Start -->	
+	
+	<definition name="myAccount" template="/WEB-INF/jsp/user/MyAccount.jsp"
+		extends=".mainTemplate">
+	</definition>
+	<definition name="myNumbers" template="/WEB-INF/jsp/user/MyNumbers.jsp"
+		extends=".mainTemplate">
+	</definition>
+	<definition name="MakePayment" template="/WEB-INF/jsp/user/MakePayment.jsp"
+		extends=".mainTemplate">
+ 
+	</definition>
+	<definition name="AutoRefill" template="/WEB-INF/jsp/user/AutoRefill.jsp"
+		extends=".mainTemplate"></definition>
+	<definition name="PaymentHistory" template="/WEB-INF/jsp/user/PaymentHistory.jsp"
+		extends=".mainTemplate"></definition>
+	<definition name="MyProfile" template="/WEB-INF/jsp/user/MyProfile.jsp"
+		extends=".mainTemplate"></definition>
+	<definition name="TransferCredits" template="/WEB-INF/jsp/user/TransferCredits.jsp"
+		extends=".mainTemplate"></definition>
+	<definition name="MakePayment" template="/WEB-INF/jsp/user/MakePayment.jsp"
+		extends=".mainTemplate"></definition> 
+	<definition name="MakePaymentSuccess" template="/WEB-INF/jsp/user/MakePaymentSuccess.jsp"
+		extends=".mainTemplate"></definition>
+		<definition name="MakePaymentFailuer" template="/WEB-INF/jsp/user/MakePaymentFailuer.jsp"
+		extends=".mainTemplate"></definition>
+		<definition name="MakePaymentForExistingUser" template="/WEB-INF/jsp/user/MakePaymentForExistingUser.jsp"
+		extends=".mainTemplate"></definition> 
+	<definition name="CallHistory" template="/WEB-INF/jsp/user/CallHistory.jsp"
+		extends=".mainTemplate"></definition>
+	<definition name="MySIM" template="/WEB-INF/jsp/user/MySIM.jsp"
+		extends=".mainTemplate"></definition>
+	<definition name="TextMessaging" template="/WEB-INF/jsp/user/TextMessaging.jsp"
+		extends=".mainTemplate"></definition>
+		 
+	<definition name="Inventory" template="/WEB-INF/jsp/partner/Inventory.jsp" 
+		extends=".mainTemplate"></definition>
+		<definition name="ChangePassword" template="/WEB-INF/jsp/user/ChangePassword.jsp"  
+		extends=".mainTemplate"></definition> 
+		<definition name="Registration" template="/WEB-INF/jsp/Registration.jsp"  
+		extends=".mainTemplate"></definition> 
+		 
+		<definition name="login" template="/WEB-INF/jsp/login.jsp"
+		extends=".mainTemplate"></definition> 
+		<definition name="500" template="/WEB-INF/jsp/500.jsp"></definition>
+		 
+	   <definition name="topUp" template="/WEB-INF/jsp/user/TopUp.jsp"
+			extends=".mainTemplate">
+		</definition>
+		<definition name="activationStatus" template="/WEB-INF/jsp/user/ActivationStatus.jsp"
+			extends=".mainTemplate">
+		</definition>
+		
+		<definition name="TransferCreditSuccess" template="/WEB-INF/jsp/user/TransferSuccess.jsp"
+			extends=".mainTemplate">  
+		</definition>
+		<definition name="TransferCreditFailure" template="/WEB-INF/jsp/user/TransferCreditFailure.jsp"
+			extends=".mainTemplate">  
+		</definition>  
+		
+		<definition name="CallHistoryFailure" template="/WEB-INF/jsp/user/CallHistoryFailure.jsp"
+			extends=".mainTemplate">  
+		</definition> 
+		 
+		<definition name="AutoRefill" template="/WEB-INF/jsp/user/AutoRefill.jsp"
+			extends=".mainTemplate">  
+		</definition>
+		
+		<definition name="PaymentHistoryFailure" template="/WEB-INF/jsp/user/PaymentHistoryFailure.jsp"
+			extends=".mainTemplate">
+		</definition>  
+		
+		<definition name="getAllPayment" template="/WEB-INF/jsp/user/getAllPaymentDetails.jsp"
+			extends=".mainTemplate"> 
+		</definition>
+		
+	<!-- Roamly User END -->	
+	 
+	<!-- Roamly Customer Care START -->	
+	
+		<definition name="CustomerDetails" template="/WEB-INF/jsp/customer/CustomerCare.jsp"
+			extends=".mainTemplate"> 
+		</definition>   
+		  
+	<!-- Roamly Customer Care START -->	
+		  
+		      
+</tiles-definitions>   

@@ -1,0 +1,1149 @@
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="ctl00_Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+	Polar Wireless
+
+</title><link href="../styles/style.css" rel="stylesheet" type="text/css" /><link rel="stylesheet" href="../nivo-slider.css" type="text/css" media="screen" /><link rel="stylesheet" href="../Sliderstyle.css" type="text/css" media="screen" /><link id="ctl00_Link1" href="../styles/MyStyle.css" rel="stylesheet" type="text/css" />
+
+
+
+    <script src="scripts/JScript.js" type="text/javascript"></script>
+
+
+
+    <script type="text/javascript" src="jq/jquery-1.4.3.min.js"></script>
+
+
+
+    <script type="text/javascript" src="jq/jquery.nivo.slider.pack.js"></script>
+
+    
+
+ <script type="text/javascript">
+
+Â      var _gaq = _gaq || [];
+
+     _gaq.push(['_setAccount', 'UA-29362014-1']);
+
+     _gaq.push(['_trackPageview']);
+
+     _gaq.push(['_setDomainName', 'polarwireless.com']);
+
+     _gaq.push(['_setAllowLinker', true]); 
+
+     (function() {
+
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+
+     })();
+
+</script>   
+
+    
+
+    
+
+   
+
+    
+
+
+
+    
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>Roamly Mobile</title>
+
+<link href="../styles/style.css" rel="stylesheet" type="text/css" />
+
+<link href="../styles/MyStyle.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript" src="../scripts/JScript.js"></script>
+
+<script type="text/javascript">
+
+
+
+
+
+    var strlist = "";
+
+
+
+    function addBarcode() {
+
+
+
+        var obj = document.getElementById('ctl00_ContentPlaceHolder1_txt_simscanned');
+
+        if (obj != null) {
+
+
+
+            if (strlist.lastIndexOf(obj.value) >= 0) {
+
+                alert(obj.value + " duplicated");
+
+                obj.value = "";
+
+                setFocus();
+
+            }
+
+            else {
+
+                if (strlist.length > 1) {
+
+                    strlist = strlist + ",";
+
+                }
+
+
+
+                var o = document.createElement("option");
+
+                var sntext = "";
+
+                if (obj.value.length == 9) {
+
+                    sntext = obj.value.substring(0, 3) + "-" + obj.value.substring(3, 6) + "-" + obj.value.substring(6, 9);
+
+
+
+                }
+
+                o.text = sntext;
+
+                o.value = obj.value;
+
+                var list = document.getElementById("ctl00_ContentPlaceHolder1_ListBox_Sims");
+
+                if (list.options.length == 1) {
+
+                    if (list.options[0].text == "List is empty") {
+
+                        list.options[0].text = sntext;
+
+                        list.options[0].value = obj.value;
+
+                    }
+
+                    else {
+
+                        list.add(o);
+
+                    }
+
+
+
+                }
+
+                else
+
+                    list.add(o);
+
+                var label = document.getElementById("ctl00_ContentPlaceHolder1_lbl_quantity");
+
+                if (label != null) {
+
+                    label.innerHTML = "Cards to be shipped: " + list.options.length; 
+
+                }
+
+                
+
+
+
+
+
+                //        for (var i = 0; i < list.options.length; ++i) alert(list.options[i].value);
+
+                //        
+
+                //        document.getElementById("ctl00_ContentPlaceHolder1_ListBox_Sims").add(o);
+
+
+
+
+
+
+
+
+
+                strlist = strlist + obj.value;
+
+                obj.value = "";
+
+                //list.innerHTML = strlist;
+
+                document.getElementById('ctl00_ContentPlaceHolder1_hf_sim').value = strlist;
+
+            }
+
+        }
+
+     
+
+    }
+
+    // 'ctl00_ContentPlaceHolder1_hf_sim'
+
+    function kH(e) {
+
+        var pK = document.all ? window.event.keyCode : e.which;
+
+        if (pK != 32 && pK != 13) {
+
+            return pK != 32;
+
+        }
+
+        else {
+
+            addBarcode();
+
+            setFocus();
+
+            return pK != 32;
+
+        }
+
+    }
+
+
+
+
+
+    document.onkeypress = kH;
+
+    if (document.layers) document.captureEvents(Event.KEYPRESS);
+
+
+
+    function setFocus() {
+
+        var obj = document.getElementById('ctl00_ContentPlaceHolder1_txt_simscanned');
+
+        if (obj != null) {
+
+            obj.focus();
+
+        }
+
+    }
+
+</script>
+
+<style type="text/css">
+
+	.ctl00_ContentPlaceHolder1_TreeView1_0 { text-decoration:none; }
+
+
+
+</style></head>
+
+
+
+<body>
+
+    <form name="aspnetForm" method="post" action="PartnerShip.html" id="aspnetForm">
+
+<div>
+
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+
+<input type="hidden" name="ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" id="ctl00_ContentPlaceHolder1_ToolkitScriptManager1_HiddenField" value="" />
+
+<input type="hidden" name="ctl00_ContentPlaceHolder1_TreeView1_ExpandState" id="ctl00_ContentPlaceHolder1_TreeView1_ExpandState" value="en" />
+
+<input type="hidden" name="ctl00_ContentPlaceHolder1_TreeView1_SelectedNode" id="ctl00_ContentPlaceHolder1_TreeView1_SelectedNode" value="" />
+
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+
+<input type="hidden" name="ctl00_ContentPlaceHolder1_TreeView1_PopulateLog" id="ctl00_ContentPlaceHolder1_TreeView1_PopulateLog" value="" />
+
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTQ3Mjc2NTQyNQ9kFgJmD2QWAgIDD2QWBgIJDw8WAh4HVmlzaWJsZWhkFgICAQ88KwAKAQAPFgIeCFVzZXJOYW1lBRljb21saW5rQHBvbGFyd2lyZWxlc3MuY29tZGQCCw8PFgIfAGdkFgICAw9kFgJmD2QWAgIBDw8WAh4EVGV4dAUBIGRkAg0PZBYEAgMPZBYQAgQPFgIeCGRpc2FibGVkZGQCBg8WAh8DZGQCCA8WBB8DZB8AaGQCCg8WBB4FY2xhc3MFBmFjdGl2ZR8DBQhkaXNhYmxlZGQCDA8WAh8DZGQCDg8WAh8DZGQCEA8WAh8AaGQCEg8WAh8DZGQCBQ9kFgJmD2QWCgIBDzwrAAkCAA8WBh4NTmV2ZXJFeHBhbmRlZGQeDFNlbGVjdGVkTm9kZWQeCUxhc3RJbmRleAICZAgUKwACBQMwOjAUKwACFggfAgUHUG9sYXJIUR4FVmFsdWUFBTg4NjAxHgdUb29sVGlwBRxSaWNobW9uZCBIaWxsIE9udGFyaW8gQ2FuYWRhHghFeHBhbmRlZGcUKwACBQMwOjAUKwACFggfAgUHQ29tbGluax8IBQU4ODg4MB8JBRZUb3JvbnRvIE9udGFyaW8gQ2FuYWRhHwpnZGQCAw8PZA8QFgFmFgEWAh4OUGFyYW1ldGVyVmFsdWUoKVlTeXN0ZW0uSW50NjQsIG1zY29ybGliLCBWZXJzaW9uPTIuMC4wLjAsIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49Yjc3YTVjNTYxOTM0ZTA4OQU4ODg4ORYBAgVkZAIRDxBkDxYBZhYBEAUNTGlzdCBpcyBlbXB0eQUNTGlzdCBpcyBlbXB0eWdkZAITDw8WAh8AaGRkAhcPDxYCHwBoZGQYAgUeX19Db250cm9sc1JlcXVpcmVQb3N0QmFja0tleV9fFgcFDmN0bDAwJGZlYXR1cmVzBQ1jdGwwMCRzdXBwb3J0BQ9jdGwwMCRjb250YWN0dXMFDGN0bDAwJGliX2VuZwUMY3RsMDAkaWJfcnVzBSNjdGwwMCRDb250ZW50UGxhY2VIb2xkZXIxJFRyZWVWaWV3MQUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRidG5fc3VibWl0BRBjdGwwMCRMb2dpblZpZXcxDw9kAgFk/d2ZwA9ku2+kmPJwCcSERBw0mTA=" />
+
+</div>
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+var theForm = document.forms['aspnetForm'];
+
+if (!theForm) {
+
+    theForm = document.aspnetForm;
+
+}
+
+function __doPostBack(eventTarget, eventArgument) {
+
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+
+        theForm.__EVENTTARGET.value = eventTarget;
+
+        theForm.__EVENTARGUMENT.value = eventArgument;
+
+        theForm.submit();
+
+    }
+
+}
+
+//]]>
+
+</script>
+
+
+
+
+
+<script src="/WebResource.axd?d=llzCaDyqC5ieCy5Yc0Szji6kEF69B9rRARKJ3qSkhe_ex122FwSocFrZGW5esIfmNI_1WRIwbqnzsEwzgJGFG9T3hbg1&amp;t=634244938260000000" type="text/javascript"></script>
+
+
+
+<script language="javascript">function PasswordHideText(source, args) { 
+
+document.getElementById('ctl00_Login1_PasswordRegularText').style.display = 'none';
+
+document.getElementById('ctl00_Login1_Password').style.display = 'inline';
+
+document.getElementById('ctl00_Login1_Password').focus();
+
+return false;
+
+} </script>
+
+<script language="javascript">function PasswordShowText(source, args) { 
+
+var aPasswordValue = document.getElementById('ctl00_Login1_Password').value;
+
+if (aPasswordValue == "") {
+
+document.getElementById('ctl00_Login1_PasswordRegularText').style.display = 'inline';
+
+document.getElementById('ctl00_Login1_Password').style.display = 'none'; }
+
+return false;
+
+} </script>
+
+<script language="javascript">function WatermarkFocus(source, args) { 
+
+var textValue = document.getElementById('ctl00_Login1_UserName').value;
+
+if (textValue == "User Name") {
+
+document.getElementById('ctl00_Login1_UserName').value = '';}
+
+return false;
+
+} </script>
+
+<script language="javascript">function WatermarkBlur(source, args) { 
+
+var textValue = document.getElementById('ctl00_Login1_UserName').value;
+
+if (textValue == "") {
+
+document.getElementById('ctl00_Login1_UserName').value = 'User Name';}
+
+return false;
+
+} </script>
+
+<script language="javascript">function Logout(source, args) { 
+
+window.location.href="Logout.html";
+
+return false;
+
+} </script>
+
+<script type="text/javascript"> function NavigateToPage(PageUrl) {document.URL = PageUrl;}</script>
+
+<script src="/ScriptResource.axd?d=qnTgeh4HlaBhoNgsHatImSaSWcZto89GkPIFTjjOOKLcLhi1_uNyCQzNV-l7jR1Sk9ciAiWdeOvMMFm-2qbF7Gxw6_Fs6liMxKDiFsLOgJa7uHFEFv1K68w7axkgivF5I3FXzg2&amp;t=ffffffff841270f7" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+    function TreeView_PopulateNodeDoCallBack(context,param) {
+
+        WebForm_DoCallback(context.data.treeViewID,param,TreeView_ProcessNodeData,context,TreeView_ProcessNodeData,false);
+
+    }
+
+var ctl00_ContentPlaceHolder1_TreeView1_Data = null;//]]>
+
+</script>
+
+
+
+<script src="/ScriptResource.axd?d=wvtxC3k961rKkt58vFg9VMUTvfxpxARbNP0pOpRokktqalXSj5j4f3R-yiv6KDQ_UelB2oKQF0vMaBSVXAPZAnwMDnRMJeIfQ-6R6WZ-75rM1MFsfU_cYz54wTIQQOPMsX8hIYJCT3HQT5QrGZRNpqd-DueY5m3TZp1SXc22ywsf1Svg0&amp;t=fffffffff9d85fa6" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+
+//]]>
+
+</script>
+
+
+
+<script src="/ScriptResource.axd?d=K673xuk1RSLsUfB6O-SDqZjF9atPVAw3QwmYTVrb1ygrvrPKOimszE-vhGCvCyNyZrpN08MIy5kMYUHhdccT1caFHSofN09NFoBbxCdICN85kRRKX5_qlsTzLZP07iP-CIYiX5RulPjNkVJP0q-JZwRDfIN2ji3pMSlSGQQGa54_vkGI0&amp;t=fffffffff9d85fa6" type="text/javascript"></script>
+
+<script src="/WebResource.axd?d=ofos4opo3JB3dZMbO0STPnwD9U1-tB4Mr3FXJ_3dubAwL7cqQayRthF3U_UZ9ltK7MgT2NGj1dSfDBck1HcejrxxTr01&amp;t=634244938260000000" type="text/javascript"></script>
+
+<div>
+
+
+
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDALjlZEQArLl6JQLAvO/x/cOAvLXvocFAs6O9NABAqen3e4FAsDqtdQEAvXw35MOArHNvvwIAsz0kpcDAqbf7oYEAt6aujgGGWGrSFkicUw8IT2wTL1dFzPMrg==" />
+
+</div>
+
+    
+
+    <div id="mainc">
+
+        <div id="header">
+
+            <div class="logo"> <a id="ctl00_Logo" hidefocus="true" href="../index.html"><img src="../images/roamly_logo.png" style="border-width:0px;" /></a> </div>
+
+            <div class="headBreak">
+
+                <img src="/images/headBreak.jpg" width="4" height="160" alt="headBreak.jpg" /></div>
+
+            <div class="subtMenu">
+
+                <div id="menu">
+
+                    
+
+                    <a href="#">
+
+                        <input type="image" name="ctl00$features" id="ctl00_features" class="features" src="../images/m-1.png" style="border-width:0px;" />
+
+                        
+
+                    </a>
+
+                    
+
+                    <a href="#">
+
+                        <input type="image" name="ctl00$support" id="ctl00_support" class="support" src="../images/m-4.png" style="border-width:0px;" />
+
+                        
+
+                    </a>
+
+                    <a href="#">
+
+                        <input type="image" name="ctl00$contactus" id="ctl00_contactus" class="contactus" src="../images/m-5.png" style="border-width:0px;" />
+
+                        
+
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="headBreak">
+
+                <img src="images/headBreak.jpg" width="4" height="160" alt="" /></div>
+
+            <div class="headForm">
+
+                
+
+                <div id="ctl00_PanelLogged">
+
+	
+
+                    <table border="0" cellpadding="2" cellspacing="0" style="width: 130px">
+
+                        <tr>
+
+                            <td>
+
+                                <table border="0" cellpadding="2">
+
+                                    <tr>
+
+                                        <td>
+
+                                            <span id="ctl00_lbl_Welcome" class="loginTxt" style="display:inline-block;font-size:0.6em;height:18px;width:100px;">Welcome back:</span>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td>
+
+                                            
+
+                                                    <span id="ctl00_LoginView1_lbl_LoggedUser" class="loginTxt" style="display:inline-block;font-size:0.6em;height:18px;width:100px;"> </span>
+
+                                                
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td align="center" style="color: red; font-size: 0.7em">
+
+                                            
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td align="left">
+
+                                            <a id="ctl00_MyAccountButton" hidefocus="true" href="../Users/MyAccount.html" style="display:inline-block;height:18px;width:111px;"><img src="../images/MyAccount_Button_off.png" style="border-width:0px;" /></a>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td align="left">
+
+                                            <a id="ctl00_LogoutButton" hidefocus="true" href="../Logout.html" style="display:inline-block;height:18px;width:111px;"><img src="../images/Logout_Button_off.png" style="border-width:0px;" /></a>
+
+                                        </td>
+
+                                    </tr>
+
+                                    <tr>
+
+                                        <td align="center">
+
+                                            <div id="ctl00_pn_Lang" class="LanguageButtons" style="height:14px;width:50px;">
+
+		
+
+                                                <input type="image" name="ctl00$ib_eng" id="ctl00_ib_eng" title="English" src="../images/us.png" style="border-width:0px;" />&nbsp;
+
+                                                <input type="image" name="ctl00$ib_rus" id="ctl00_ib_rus" title="Russian" src="../images/ru.png" style="border-width:0px;" />
+
+                                            
+
+	</div>
+
+                                        </td>
+
+                                    </tr>
+
+                                    
+
+                                </table>
+
+                            </td>
+
+                        </tr>
+
+                    </table>
+
+                    
+
+                
+
+</div>
+
+                
+
+            </div>
+
+        </div>
+
+        <div>
+
+            
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+Sys.WebForms.PageRequestManager._initialize('ctl00$ContentPlaceHolder1$ToolkitScriptManager1', document.getElementById('aspnetForm'));
+
+Sys.WebForms.PageRequestManager.getInstance()._updateControls(['tctl00$ContentPlaceHolder1$UpdatePanel1'], ['ctl00$ContentPlaceHolder1$txt_simscanned'], [], 90);
+
+//]]>
+
+</script>
+
+ 
+
+    <div class="grayBar">
+
+    </div>
+
+    <div id="contentBox">
+
+        <div id="accountSubBox">
+
+            <link id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_Link1" href="../styles/style.css" rel="stylesheet" type="text/css"></link>
+
+  	<link id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_Link2" href="styles/MyStyle.css" rel="stylesheet" type="text/css"></link>
+
+    
+
+
+
+	
+
+
+
+		<div class="box">
+
+	
+
+			<ul class="submenu">
+
+					
+
+				<li id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_liMyParnters">
+
+					<a id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_lnkMyParnters" title="Partners" href="MyPartners.html" style="text-decoration:none;">PARTNERS</a>
+
+				</li>	
+
+				<li id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_liMyUsers">
+
+					<a id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_lnkMyUsers" title="Userss" href="PartnerUsers.html" style="text-decoration:none;">USERS</a>
+
+				</li>										
+
+				
+
+				<li id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_liTrack" class="active" disabled="disabled">
+
+					<a id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_lnkTrack" title="Send and Receive Polar1 SIM" href="Inventory.html" style="text-decoration:none;">INVENTORY</a>
+
+				</li>
+
+				<li id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_liMonitor">
+
+					<a id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_lnkMonitor" title="Monitor" href="Monitor_New.html" style="text-decoration:none;">MONITOR</a>
+
+				</li>
+
+					<li id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_liStat">
+
+					<a id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_lnkStat" title="Statistics" href="MyStat.html" style="text-decoration:none;">STATISTICS</a>
+
+				</li>	
+
+				
+
+					
+
+				<li id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_liIncompatibility" class="last">
+
+					<a id="ctl00_ContentPlaceHolder1_UC_AdminMenu1_lnkIncomp" title="My PolarSIM" href="incompatible.html" style="text-decoration:none;">PHONE INCOMPATIBILITY</a>
+
+				</li>																
+
+			</ul>
+
+		</div>
+
+
+
+        </div>
+
+        <div id="accountContent3">
+
+            <div id="contentTitle">
+
+                INVENTORY</div>
+
+            <div id="contentTx4">
+
+                <div>
+
+                    <a href="Inventory.html" hidefocus="true" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('iStock','','../images/myPartner-smenu-12.png',1)">
+
+                        <img src="../images/myPartner-smenu-11.png" width="248" height="39" border="0" name="iStock"
+
+                            alt="Shipping" /></a><img src="../images/myPartner-smenu-22.png" width="248" height="39"
+
+                                border="0" name="iship" /><a href="PartnerRcv.html" hidefocus="true" onmouseout="MM_swapImgRestore()"
+
+                                    onmouseover="MM_swapImage('ircv','','../images/myPartner-smenu-32.png',1)"><img src="../images/myPartner-smenu-31.png"
+
+                                        width="248" height="39" border="0" name="ircv" /></a>
+
+                </div>
+
+                <div>
+
+                    <img src="../images/myShipping-smenu-12.png" width="373" height="39"
+
+                                border="0" name="isim" /><a href="PartnerShipBox.html" hidefocus="true" onmouseout="MM_swapImgRestore()"
+
+                                    onmouseover="MM_swapImage('ibox','','../images/myShipping-smenu-22.png',1)"><img src="../images/myShipping-smenu-21.png"
+
+                                        width="373" height="39" border="0" name="ibox" /></a>
+
+                </div>                
+
+                <div class="myAccountbody">
+
+                    <div id="ctl00_ContentPlaceHolder1_UpdatePanel1">
+
+	
+
+                            <div class="shipping morehalf">
+
+                                
+
+                                <div style="margin-left: 20px; float:left">
+
+                                    <a href="#ctl00_ContentPlaceHolder1_TreeView1_SkipLink"><img alt="Skip Navigation Links." src="WebResource.axd?d=KAvxdBRNIfzxx56xplqjE0V8R0jZgGwf3JSSrO3ZxoQnsVdV4XNgU5xjfDpi8stHUS0_w0ZiKR5Ht51BpFOZ--i83gE1&amp;t=634244938260000000" width="0" height="0" style="border-width:0px;" /></a><div id="ctl00_ContentPlaceHolder1_TreeView1" class="partner">
+
+		<table cellpadding="0" cellspacing="0" style="border-width:0;">
+
+			<tr>
+
+				<td><a id="ctl00_ContentPlaceHolder1_TreeView1n0" href="javascript:TreeView_ToggleNode(ctl00_ContentPlaceHolder1_TreeView1_Data,0,document.getElementById('ctl00_ContentPlaceHolder1_TreeView1n0'),'-',document.getElementById('ctl00_ContentPlaceHolder1_TreeView1n0Nodes'))"><img src="/WebResource.axd?d=irzgQtNbFfhMAA95YHKfo-HJ7RPjl-VMdc4JDqXMUpdXGjv4ciWr3UDnrBKLiQyboUiU8TYG7PFiGlygAUturHhbIjdexEDdpGbXvHBTCmPxr8I10&amp;t=634244938260000000" alt="Collapse PolarHQ" style="border-width:0;" /></a></td><td style="white-space:nowrap;"><a class="ctl00_ContentPlaceHolder1_TreeView1_0" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$TreeView1','s88601')" onclick="TreeView_SelectNode(ctl00_ContentPlaceHolder1_TreeView1_Data, this,'ctl00_ContentPlaceHolder1_TreeView1t0');" title="Richmond Hill Ontario Canada" id="ctl00_ContentPlaceHolder1_TreeView1t0">PolarHQ</a></td>
+
+			</tr>
+
+		</table><div id="ctl00_ContentPlaceHolder1_TreeView1n0Nodes" style="display:block;">
+
+			<table cellpadding="0" cellspacing="0" style="border-width:0;">
+
+				<tr>
+
+					<td><div style="width:20px;height:1px"></div></td><td><img src="/WebResource.axd?d=BlzMiynwOD6j3uOsYQIK7l-lF0ztsDkHMjS70si_sYVChrdJsPYRbKCGHh9C5Q_LQWjYKdM3J9yxm2QUUAwkJOgFvU6mV_Q2pi7urhIhqmazEQ8T0&amp;t=634244938260000000" alt="" /></td><td style="white-space:nowrap;"><a class="ctl00_ContentPlaceHolder1_TreeView1_0" href="javascript:__doPostBack('ctl00$ContentPlaceHolder1$TreeView1','s88601\\88880')" onclick="TreeView_SelectNode(ctl00_ContentPlaceHolder1_TreeView1_Data, this,'ctl00_ContentPlaceHolder1_TreeView1t1');" title="Toronto Ontario Canada" id="ctl00_ContentPlaceHolder1_TreeView1t1">Comlink</a></td>
+
+				</tr>
+
+			</table>
+
+		</div>
+
+	</div><a id="ctl00_ContentPlaceHolder1_TreeView1_SkipLink"></a>
+
+                                    
+
+                                </div>
+
+                                
+
+                                <div style="margin-left: 20px; float:left">
+
+                                <input type="hidden" name="ctl00$ContentPlaceHolder1$hf_sim" id="ctl00_ContentPlaceHolder1_hf_sim" />
+
+                                <table  class="shipping">
+
+                                    
+
+                                        <tr>
+
+                                            <td style="text-align: left">
+
+                                                <span id="ctl00_ContentPlaceHolder1_Label5" style="display:inline-block;width:100px;">Partner</span>
+
+                                            </td>
+
+                                            <td>
+
+                                                <span id="ctl00_ContentPlaceHolder1_lbl_partner" style="display:inline-block;width:160px;"></span>
+
+                                            </td>
+
+                                            
+
+                                        </tr>
+
+                                   
+
+                                        <tr>
+
+                                            <td style="text-align: left">
+
+                                                <span id="ctl00_ContentPlaceHolder1_lbl_inputheader">Serial Num</span>
+
+                                            </td>
+
+                                            <td>         
+
+                                                <input name="ctl00$ContentPlaceHolder1$txt_simscanned" type="text" id="ctl00_ContentPlaceHolder1_txt_simscanned" onchange="addBarcode();" onblur="setFocus();" />                                          
+
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td colspan="2" style="text-align: right">
+
+                                                
+
+                                            </td>
+
+                                        </tr>
+
+                                        <tr>
+
+                                            <td colspan="2">
+
+                                                <div style="height: 15px"></div>
+
+                                            </td>
+
+                                        </tr>
+
+                                    
+
+                                </table>
+
+                                </div>
+
+                            </div>
+
+                            
+
+                            <div style="width: 180px; height: 220px; display: inline" class="shipping">
+
+                                <center></center>
+
+                                    <span id="ctl00_ContentPlaceHolder1_lbl_quantity" style="display:inline-block;width:160px;">Cards to be shipped</span>
+
+                                
+
+                                <div style="width: 178px; height: 170px; overflow: auto;">
+
+                                <select size="4" name="ctl00$ContentPlaceHolder1$ListBox_Sims" id="ctl00_ContentPlaceHolder1_ListBox_Sims" style="height:170px;width:140px;">
+
+		<option value="List is empty">List is empty</option>
+
+
+
+	</select>
+
+                                    
+
+                                   
+
+                                </div>
+
+                                <center>
+
+                                <div style="height: 15px">
+
+                                
+
+                                  
+
+                                </div>
+
+                                <div style="height: 15px"></div>
+
+                                <div class="callHistGrayTinyLine"></div>
+
+                                
+
+                                <input type="image" name="ctl00$ContentPlaceHolder1$btn_submit" id="ctl00_ContentPlaceHolder1_btn_submit" hidefocus="true" src="../images/Submit_Gray.png" style="border-width:0px;margin: 0;" />
+
+                                                                                      
+
+                                      
+
+                                </center>
+
+                                <div style="height: 15px"></div>
+
+                            </div>
+
+                            
+
+                        
+
+</div>
+
+                    <div id="ctl00_ContentPlaceHolder1_UpdateProgress2" style="display:none;">
+
+	
+
+                            <div style="border: 1px solid black; left: 50%; width: 100px; color: white; position: absolute;
+
+                                top: 50%; height: 60px; background-color: white; background-position: center center;
+
+                                background-image: url('/Images/ajax-loader_green.gif'); text-align: center; background-repeat: no-repeat;">
+
+                            </div>
+
+                        
+
+</div>
+
+                </div>
+
+            </div>
+
+           
+
+            
+
+        </div>
+
+        <div style="clear: both">
+
+        </div>
+
+    </div>
+
+    <div class="grayBar">
+
+    </div>
+
+
+
+        </div>
+
+        <div id="homeSlides">
+
+            <div class="homeSlide" style="margin-left:120px">
+
+                <div class="homeSlideText">
+
+                    <p>
+
+                    </p>
+
+                    <span class="homeSlideTextTitle">Support</span><br />
+
+                    <a id="ctl00_hl_usermanual" class="homeSlideText" href="../Polar%20Wireless%20-%20User%20Guide%20Jan%205-2010.pdf" target="_blank" style="text-decoration:none;">Instruction Manual</a>
+
+                    
+
+                    <br />
+
+                    <a id="ctl00_HyperLink1" class="homeSlideText" href="../support.html" target="_self" style="text-decoration:none;">FAQ</a>
+
+                    
+
+                    <br />
+
+                    <a id="ctl00_HyperLink2" class="homeSlideText" href="../Privacy.html" target="_self" style="text-decoration:none;">Privacy</a>
+
+                    
+
+                    <br />
+
+                    <a id="ctl00_HyperLink3" class="homeSlideText" href="../terms.html" target="_self" style="text-decoration:none;">Terms and Conditions</a>
+
+                      
+
+                    
+
+                </div>
+
+            </div>
+
+            <div class="footerBreakHome">
+
+                <img src="images/footerBreakLine.jpg" width="1" height="105" alt="" /></div>
+
+            <div class="homeSlide">
+
+                
+
+                <div class="homeSlideText">
+
+                    <p>
+
+                    </p>
+
+                    <span class="homeSlideTextTitle">Our Company</span>
+
+                    <br />
+
+                    
+
+                    
+
+                    <a id="ctl00_HyperLink4" class="homeSlideText" href="../contactus.html" target="_self" style="text-decoration:none;">Contact Us</a>
+
+                    <br />
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    <a id="ctl00_HyperLink7" class="homeSlideText" href="../IndustryNews.html" target="_self" style="text-decoration:none;">Industry News</a>
+
+                    
+
+                </div>
+
+            </div>
+
+            <div class="footerBreakHome">
+
+                <img src="images/footerBreakLine.jpg" width="1" height="105" alt="" /></div>
+
+            <div class="homeSlide">
+
+                
+
+                <div class="homeSlideText">
+
+                    <p>
+
+                    </p>
+
+                    <span class="homeSlideTextTitle">POLAR1</span><br />
+
+                    
+
+                    <a id="ctl00_HyperLink8" class="homeSlideText" href="../users/myaccount.html" target="_self" style="text-decoration:none;">My Account</a>
+
+                    <br />
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    
+
+                    <a id="ctl00_HyperLink11" class="homeSlideText" href="../features.html" target="_self" style="text-decoration:none;">Features</a>
+
+                                            <br />
+
+                    <a id="ctl00_HyperLink12" class="homeSlideText" href="../PhoneIncompat.html" target="_self" style="text-decoration:none;">Phone incompatibility</a>  
+
+                </div>
+
+            </div>
+
+            
+
+        </div>
+
+        <div id="footerSpace">
+
+        </div>
+
+    </div>
+
+    
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+var ctl00_ContentPlaceHolder1_TreeView1_ImageArray =  new Array('', '', '', '/WebResource.axd?d=4MvitwFRIrNycw507i3HL9Q6Eag7fXDE_S7SKLRZIneUer1GemmG_xSutrZ8GCYs34AZlnwBbcJztD7IZ7t7HvdEHghqrNhcrjuHq3lRtLh9-WCz0&t=634244938260000000', '/WebResource.axd?d=zgPRKURgJEZgZEoYD9Z8CNugTYn1Y6JaC32pXAzWNy76n6tprrWHqdLD0Jw4MGM1D_gcrZCOKj9ai18BRj_P13xsmDcWYluadFdVnBGISM5omU5l0&t=634244938260000000', '/WebResource.axd?d=rNbYbPLAUpduMFjRIjqx6MvB3diOoeHvviRhByCybrJLmqKkYHW2ON87MaOX8GMtFeQsBjl5c8l4yZq2L7yAbWUEeUQf0xbj089oFwX-CvwHrINB0&t=634244938260000000', '/WebResource.axd?d=fB2n33NsGt-6sSYn_5UY0PE__cKfASmq_sQlvywd3rxdVneljE6lO9MdJFCW1wf34dLAwO0msl5abm-FZoEcKDRu3eTUzqVdLNTRCHxn8xlMDBSo0&t=634244938260000000', '/WebResource.axd?d=e7M-eCI2Y82juELrqfQlmfF07aRU5XrwKtkYlLWC1Wc6ci-MFOF9RyN7a-ZIsLnMWka-sseT7GYiEYov8b5aTDzD5Tfx7fRzOnTFCKVjDirI2ARJ0&t=634244938260000000', '/WebResource.axd?d=oqq02pt24_Mt0pGJphHEdC2RLKdHNG9rEOctQV0dunOSEo1FSh5MUf8IGQ9vFhKcC29bhzisIen-km8oa-gbdaa6bEltXNBfyFIT33bn-ozqEYXH0&t=634244938260000000', '/WebResource.axd?d=66ATAswLBVwzdkxDAOTeBaZ8rBzYpQA_BnM0XwANl-3SJR5MO11HxpHNfC0hIKX4853y-BjYtrDmP-VbS9MY5fCia_VjkZ4leq7yjjxuiX-qwHPW0&t=634244938260000000', '/WebResource.axd?d=TJTZM18IjpZgySH2rFKGGR8T9HHyKIT22DjSR_oEEzK4MeA-lbuySNfmmKtEvubejuvBQfeu4nX3KqT0a1G6u9skl2xMujP8F04vUqjyr1YoyW-M0&t=634244938260000000', '/WebResource.axd?d=TM44KcIgkEE9omN6txF1PB9YMilu2Oub4aLvaXQXBUM_H5qQR6wdR5cH5xYS6czbrrFi3YYqxEUfvtw-a1xk8wl8jQoSIE4TXKlswLAt4CkYGTev0&t=634244938260000000', '/WebResource.axd?d=GOuuonynhNYZuWNHFpCmFcBaO1OR1b0GqqcaWUgq4S6oKfGIZ3YfbJFLqTooAj3IA57dJDssXnFPCUmAYWvVwpqgoevCDw9LkAoRsekYzDtRJ0uZ0&t=634244938260000000', '/WebResource.axd?d=BlzMiynwOD6j3uOsYQIK7l-lF0ztsDkHMjS70si_sYVChrdJsPYRbKCGHh9C5Q_LQWjYKdM3J9yxm2QUUAwkJOgFvU6mV_Q2pi7urhIhqmazEQ8T0&t=634244938260000000', '/WebResource.axd?d=2zyZnJHeSOmjCLcVNLyqSAGiEXcP4oh-rzQLQgVnko3hvZd-xebtoOUGOWzu-ZywrJuJsc0Se4q3Db9aKfPYinS1So4V29J9o1fAypgK8pwh3dN70&t=634244938260000000', '/WebResource.axd?d=dN7xrXb1TQ4vMmVcdhhPnfhJLfm1Ts87HJejZnAL6_J3CWwM1VewUKESif_LmpcJ7VfWHO2twoGIigIrkr_EY4XQ5byBYgm84lBpHfqlw0YomZ_p0&t=634244938260000000', '/WebResource.axd?d=bN2_GQE3SdwJ9bJvtzjXtJ4RwQIoog5gjcdPaK9KrPSiJi6yrXMT0wiv7ZLoUjghuKGe5SVKw4aiFynOsT24tMomDvnNhqFj9C61rfqZg4lZ4mF30&t=634244938260000000', '/WebResource.axd?d=MyJztW489rzsz5vxUk5nmQmp04aEIZzl9CrZi_l4rKl4f3rbjDuzx_RujIQw8ITDJ5BC6yfgsPI-FRluMUNciCaSxWbHt7Rf8xKFesvB7F82ll2k0&t=634244938260000000', '/WebResource.axd?d=irzgQtNbFfhMAA95YHKfo-HJ7RPjl-VMdc4JDqXMUpdXGjv4ciWr3UDnrBKLiQyboUiU8TYG7PFiGlygAUturHhbIjdexEDdpGbXvHBTCmPxr8I10&t=634244938260000000');
+
+//]]>
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+
+//<![CDATA[
+
+
+
+WebForm_InitCallback();var ctl00_ContentPlaceHolder1_TreeView1_Data = new Object();
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.images = ctl00_ContentPlaceHolder1_TreeView1_ImageArray;
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.collapseToolTip = "Collapse {0}";
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.expandToolTip = "Expand {0}";
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.expandState = theForm.elements['ctl00_ContentPlaceHolder1_TreeView1_ExpandState'];
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.selectedNodeID = theForm.elements['ctl00_ContentPlaceHolder1_TreeView1_SelectedNode'];
+
+for (var i=0;i<19;i++) {
+
+var preLoad = new Image();
+
+if (ctl00_ContentPlaceHolder1_TreeView1_ImageArray[i].length > 0)
+
+preLoad.src = ctl00_ContentPlaceHolder1_TreeView1_ImageArray[i];
+
+}
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.lastIndex = 2;
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.populateLog = theForm.elements['ctl00_ContentPlaceHolder1_TreeView1_PopulateLog'];
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.treeViewID = 'ctl00$ContentPlaceHolder1$TreeView1';
+
+ctl00_ContentPlaceHolder1_TreeView1_Data.name = 'ctl00_ContentPlaceHolder1_TreeView1_Data';
+
+Sys.WebForms.PageRequestManager.getInstance()._registerDisposeScript("ctl00_ContentPlaceHolder1_UpdatePanel1", "ctl00_ContentPlaceHolder1_TreeView1_ImageArray.length = 0;\r\nctl00_ContentPlaceHolder1_TreeView1_Data = null;");
+
+WebForm_AutoFocus('ctl00_ContentPlaceHolder1_txt_simscanned');Sys.Application.initialize();
+
+Sys.Application.add_init(function() {
+
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":"ctl00_ContentPlaceHolder1_UpdatePanel1","displayAfter":200,"dynamicLayout":true}, null, null, $get("ctl00_ContentPlaceHolder1_UpdateProgress2"));
+
+});
+
+//]]>
+
+</script>
+
+</form>
+
+</body>
+
+</html>
+

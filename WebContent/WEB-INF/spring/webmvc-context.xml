@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="
+          http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+          http://www.springframework.org/schema/context 
+          http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+ 
+	<mvc:annotation-driven />    
+
+	<!-- Use to scan all package inside controller folder for required request 
+		url -->
+	<context:component-scan base-package="com.roamly" /> 
+    
+ 
+	<!-- View Start -->
+
+	<bean id="tilesViewResolver"
+		class="org.springframework.web.servlet.view.UrlBasedViewResolver"
+		p:viewClass="org.springframework.web.servlet.view.tiles2.TilesView"
+		p:order="0" />
+	<bean id="tilesConfigurer"
+		class="org.springframework.web.servlet.view.tiles2.TilesConfigurer"
+		p:definitions="/WEB-INF/tiles-defs/templates.xml" />
+	<!-- END -->
+
+	<!-- To Read Messages -->
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	<mvc:resources mapping="/resources/**" location="/resources/" />
+	<!-- END -->
+
+	<!-- For internationalization Start -->
+	<mvc:interceptors>
+		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="lang"></property>
+		</bean>
+	</mvc:interceptors>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean> 
+	   
+	<bean id="userService" class="com.roamly.user.services.UserServiceImp" />
+	<bean id="userValidator" class="com.roamly.user.validator.UserMakePaymentValidator" />
+	<bean id="userValidatorForActiveUser" class="com.roamly.user.validator.UserActivateCardValidator" />   
+	<bean id="userValidatorForExistingUser" class="com.roamly.user.validator.UserMakePaymentValidatorExistingUser" />
+	<bean id="userCallHistoryValidator" class="com.roamly.user.validator.UserCallHistoryValidator" />
+	<bean id="userPaymentValidator" class="com.roamly.user.validator.UserPaymentHistoryValidator" />
+	  
+	<bean id="userProfileValidator" class="com.roamly.user.validator.UserProfileValidator" />  
+	<!-- END -->  
+
+	<!-- roamly SERVICE BEAN DEFINATION START -->
+	<!-- DATE 01/10/1012 -->
+</beans>

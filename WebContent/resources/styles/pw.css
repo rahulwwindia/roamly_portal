@@ -1,0 +1,290 @@
+/* ========================== Index Page ==================== */
+body {
+	background-position: center top;
+	width: 1050px;	
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Helvetica, Arial, sans-serif;
+	background-image: url(../../images/NorthAmerica/main_bg.jpg);
+	background-repeat: no-repeat;
+	background-color: #000000;
+}
+
+#container {
+	display: inline-block;
+	width: 1050px;
+	height: auto;
+	margin: 0px auto;
+}
+.image {
+}
+#pop {
+	text-align: center;
+}
+.margin-top {
+	margin-top: 0px;
+}
+.margin-bottom {
+	margin-bottom: 0px;
+}
+.float-left {
+	float: left;
+}
+
+#nav {
+	display: inline-block;
+	width: 653px;
+	height: 26px;	
+	background-image: url(../../images/NorthAmerica/nav_bg.jpg);
+	background-repeat: no-repeat;
+}
+#nav-text {
+	font-size: 15px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	word-spacing: 12px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+#login {
+	display: inline-block;
+	width: 865px;
+	height: 136px;	
+	background-image: url(../../images/NorthAmerica/slogan.jpg);
+	background-repeat: no-repeat;
+	float: left;
+}
+#login-text {
+	width: 200px;
+	height: 130px;
+	font-size: 12px;
+	text-transform: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #FFFF00;
+	padding-top: 6px;
+	padding-left: 647px;
+	padding-right: 18px;
+	padding-bottom: 0px;
+}
+div#login-text a:link, divlogin-text a:visited {
+	text-decoration: underline;
+	color: #FFFF00;
+}
+divlogin-text a:hover{
+	color: #FFFF00;
+	text-decoration: underline;
+}
+div#nav-text a:link, div#nav-text a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+div#nav-text a:hover{
+	color: #FFFF00;
+	text-decoration: underline;
+}
+#flashmovie {
+	display: inline-block;
+	width: 466px;
+	height: 343px;	
+}
+#column-form {
+	display: inline-block;
+	width: 1050px;
+	height: 529px;
+	background-image: url(../../images/NorthAmerica/form_bg.jpg);
+	background-repeat: no-repeat;	
+}
+#form-text {
+	width: 478px;
+	height: 529px;
+	font-size: 17px;
+	text-transform: normal;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-left: 308px;
+	padding-right: 264px;
+	padding-bottom: 0px;
+}
+.smtext {
+	font-size: 12px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+}
+
+/* ========================== Checkout Page ==================== */
+#left-columnfour {
+	display: inline-block;
+	width: 709px;
+	height: 826px;	
+}
+
+#right-columnfour {
+	display: inline-block;
+	width: 391px;
+	height: 826px;
+	background-image: url(../../images/NorthAmerica/p3_mainform_bg.jpg);
+	background-repeat: no-repeat;	
+}
+#form-boxfour {
+	display: inline-block;
+	width: 350px;
+	height: auto;	
+	background-image: url(../../images/NorthAmerica/p3_boxform_bg.jpg);
+	background-repeat: no-repeat;
+	background-color: #0060E3;
+}
+
+#block-containereight {
+	display: inline-block;
+	width: 1110px;
+	height: 397px;	
+	background-image: url(../../images/NorthAmerica/p3_box1bg.jpg);
+	background-repeat: no-repeat;
+}
+#block-boxeight {
+	display: inline-block;
+	width: 500px;
+	height: 280px;
+	font-size: 18px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;	
+	line-height: 1.5em;
+	text-align: center;
+	padding-top: 117px;
+	padding-left: 310px;
+	padding-right: 300px;
+	padding-bottom: 0px;
+}
+
+#package {
+	display: inline-block;
+	width: 676px;
+	height: 198px;
+	background-image: url(../../images/NorthAmerica/p3_productdescrip_bg.jpg);
+	background-repeat: no-repeat;
+	padding-top: 0px;
+	padding-left: 33px;
+	padding-right: 0px;
+	padding-bottom: 0px;	
+}
+#package-container {
+	border-color: black;
+	border-style: solid;
+	display: inline-block;
+	width: 650px;
+	height: auto;
+	border-width: thin;	
+	background-color: #FFFFFF;
+}
+
+#packagebox-style
+{
+	font-family: "Arial", Sans-Serif;
+	font-size: 12px;
+	margin: 0px;
+	width: 650px;
+	border-collapse: collapse;
+}
+#packagebox-style th
+{
+	font-size: 14px;
+	font-weight: bold;
+	padding: 4px;
+	background: #53C9E6 url('') repeat-x;
+	border-top: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+	color: #00197F;
+}
+#packagebox-style td
+{
+	padding: 5px; 
+	border-bottom: 1px solid #000000;
+	border-top: 1px solid #000000;
+	border-left: 1px solid #000000;
+	border-right: 1px solid #000000;
+}
+#date-container {
+	display: inline-block;
+	width: 709px;
+	height: 58px;	
+	background-image: url(../../images/NorthAmerica/p3_date_bg.jpg);
+	background-repeat: no-repeat;
+}
+#date-box {
+	display: inline-block;
+	width: 709px;
+	height: 38px;
+	font-size: 18px;
+	text-transform: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #FFFFFF;	
+	text-align: center;
+	line-height: 1.0em;
+	padding-top: 25px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+#terms-container {
+	display: inline-block;
+	width: 709px;
+	height: 176px;	
+	background-image: url(../../images/NorthAmerica/p3_terms_bg.jpg);
+	background-repeat: no-repeat;
+}
+#terms-box {
+	display: inline-block;
+	width: 568px;
+	height: 170px;
+	font-size: 14px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;	
+	line-height: 1.1em;
+	padding-top: 8px;
+	padding-left: 76px;
+	padding-right: 65px;
+	padding-bottom: 0px;
+}
+/* ========================== Footer Page ==================== */
+#footer {
+	text-align: center;
+	width: 1050px;
+	height: 40px;
+	height: auto;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	line-height: 1.2em;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 0px;
+}
+
+div#footer a:link, div#footer a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+div#footer a:hover{
+	text-decoration: underline;
+}

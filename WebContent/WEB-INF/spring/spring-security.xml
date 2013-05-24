@@ -1,0 +1,40 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:security="http://www.springframework.org/schema/security"
+		xmlns:mvc="http://www.springframework.org/schema/mvc" 
+		xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/security  http://www.springframework.org/schema/security/spring-security-3.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
+   
+	<security:http auto-config="true" use-expressions="true" > 
+	
+		<security:intercept-url pattern="/" access="permitAll" />
+		<security:intercept-url pattern="/login.htm" access="permitAll" />
+		<security:intercept-url pattern="/loginfailed.htm" access="permitAll" />
+		<security:intercept-url pattern="/logout.htm" access="permitAll" />        
+		<security:intercept-url pattern="/j_spring_security_check" access="permitAll" />  
+		<security:intercept-url pattern="/resources/**" access="permitAll" />    
+		<security:intercept-url pattern="/customerCare/**" access="hasRole('ROLE_CC')" />    
+		<security:intercept-url pattern="/myAccount**" access="hasRole('ROLE_USER') or hasRole('ROLE_CC')" />
+		<security:intercept-url pattern="/**" access="isAthenticate()" />  
+		<security:intercept-url pattern="/**" access="hasRole('ROLE_USER')" />     
+		<!-- Override default login and logout pages -->           
+		<security:form-login login-page="/login.htm"  default-target-url="/myAccount.htm" authentication-failure-url="/loginfailed.htm"
+		always-use-default-target="true" />    
+		<security:access-denied-handler error-page="/loginfailed.htm"/>
+		<security:logout  logout-success-url="/logout.htm" invalidate-session="true" />
+		 
+		   
+	</security:http>  
+	     
+	<security:authentication-manager>
+		<security:authentication-provider ref="userAuthentication"/>
+		
+	</security:authentication-manager>  
+
+<bean id="userAuthentication" class="com.roamly.user.services.CustomAuthenticationProvider"></bean>
+  		
+</beans> 

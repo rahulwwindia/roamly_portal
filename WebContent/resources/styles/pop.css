@@ -1,0 +1,144 @@
+/* ========================== Index Page ==================== */
+body {
+	background-position: center top;
+	width: 1200px;	
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Helvetica, Arial, sans-serif;
+	background-color: #000000;
+}
+#container {
+	display: inline-block;
+	width: 1200px;
+	height: auto;
+	margin: 0px auto;
+}
+#image {
+}
+#pop {
+	text-align: center;
+}
+.margin-top {
+	margin-top: 0px;
+}
+.margin-bottom {
+	margin-bottom: 0px;
+}
+.float-left {
+	float: left;
+}
+#nav {
+	display: inline-block;
+	width: 653px;
+	height: 26px;	
+	background-image: url(images/nav_bg.jpg);
+	background-repeat: no-repeat;
+}
+#nav-text {
+	font-size: 15px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	word-spacing: 40px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+div#nav-text a:link, div#nav-text a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+div#nav-text a:hover{
+	color: #FFFF00;
+	text-decoration: underline;
+}
+#flashmovie {
+	display: inline-block;
+	width: 466px;
+	height: 343px;	
+}
+#column-form {
+	display: inline-block;
+	width: 1050px;
+	height: 529px;
+	background-image: url(images/form_bg.jpg);
+	background-repeat: no-repeat;	
+}
+#form-text {
+	width: 478px;
+	height: 529px;
+	font-size: 17px;
+	text-transform: normal;
+	font-weight: bold;
+	font-style: normal;
+	text-align: left;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-left: 308px;
+	padding-right: 264px;
+	padding-bottom: 0px;
+}
+.smtext {
+	font-size: 12px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+}
+#column-one {
+	display: inline-block;
+	width: 761px;
+	height: 918px;
+}
+#column-two {
+	display: inline-block;
+	width: 439px;
+	height: 918px;
+}
+#form {
+	display: inline-block;
+	width: 351px;
+	height: 661px;
+	background-image: url(images/p2_formmain_bg.jpg);
+	background-repeat: no-repeat;
+	font-size: 14px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;	
+}
+.formsmtext {
+	font-size: 11px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;
+}
+/* ========================== Footer Page ==================== */
+#footer {
+	text-align: center;
+	width: 1200px;
+	height: 40px;
+	height: auto;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	line-height: 1.2em;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 0px;
+}
+
+div#footer a:link, div#footer a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+div#footer a:hover{
+	text-decoration: underline;
+}

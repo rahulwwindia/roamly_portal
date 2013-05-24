@@ -1,0 +1,415 @@
+/* ========================== Index Page ==================== */
+body {
+	background-position: center top;
+	width: 1050px;	
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	font-family: Helvetica, Arial, sans-serif;
+	background-image: url(../../images/NorthAmerica/main2_bg.jpg);
+	background-repeat: no-repeat;
+	background-color: #01061E;
+}
+#container {
+	display: inline-block;
+	width: 1050px;
+	height: auto;
+	margin: 0px auto;
+}
+#image {
+}
+#pop {
+	text-align: center;
+}
+.margin-top {
+	margin-top: 0px;
+}
+.margin-bottom {
+	margin-bottom: 0px;
+}
+.float-left {
+	float: left;
+}
+#nav {
+	display: inline-block;
+	width: 653px;
+	height: 26px;	
+	background-image: url(../../images/NorthAmerica/rates_topnav_bg.jpg);
+	background-repeat: no-repeat;
+}
+#nav-text {
+	font-size: 15px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	word-spacing: 15px;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+div#nav-text a:link, div#nav-text a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+div#nav-text a:hover{
+	color: #FFFF00;
+	text-decoration: underline;
+}
+#flashmovie {
+	display: inline-block;
+	width: 466px;
+	height: 343px;	
+}
+#column-formrate {
+	display: inline-block;
+	width: 1050px;
+	height: 224px;
+	background-image: url(../../images/NorthAmerica/rates_form_bg.jpg);
+	background-repeat: no-repeat;	
+}
+#formrate-text {
+	width: 701px;
+	height: 207px;
+	font-size: 17px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	text-align: left;
+	color: #000000;
+	padding-top: 0px;
+	padding-left: 348px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+#finalrate {
+	display: inline-block;
+	width: 1050px;
+	/**/height: 438px;
+	background-image: url(../../images/NorthAmerica/rates_finalrates_bgnn.jpg);
+	background-repeat: no-repeat;	
+}
+#finalrate-text {
+	width: 746px;
+	/**/height: 438px;
+	font-size: 12px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	text-align: left;
+	text-align: left;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-left: 224px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+.smtext {
+	font-size: 12px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+}
+#anchor-bg {
+	display: inline-block;
+	width: 1050px;
+	height: 33px;	
+	background-image: url(../../images/NorthAmerica/aboutus_anchor_bg.jpg);
+	background-repeat: no-repeat;
+}
+#anchor-text {
+	width: 1050px;
+	height: 33px;
+	font-size: 13px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;
+	text-align: center;
+	padding-top: 0px;
+	padding-left: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+}
+div#anchor-text a:link, div#anchor-text a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+div#anchor-text a:hover{
+	color: #000000;
+	text-decoration: underline;
+}
+#aboutbodyone-bg {
+	display: inline-block;
+	width: 1050px;
+	height: 449px;	
+	background-image: url(../../images/NorthAmerica/aboutus_body1_bg.jpg);
+	background-repeat: no-repeat;
+}
+#aboutbodyone-text {
+	width: 777px;
+	height: 449px;
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	line-height: 1.2em;
+	padding-top: 0px;
+	padding-left: 129px;
+	padding-right: 144px;
+	padding-bottom: 0px;
+}
+.imgleft{
+	float: left;
+	margin: 0px 15px 0px 0px;
+}
+.imgright{
+	float: right;
+	margin: 0px 0px 0px 15px;
+}
+#aboutbodytwo-bg {
+	display: inline-block;
+	width: 1050px;
+	height: 288px;	
+	background-image: url(../../images/NorthAmerica/aboutus_body2_bg.jpg);
+	background-repeat: no-repeat;
+}
+#aboutbodytwo-text {
+	width: 777px;
+	height: 288px;
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	line-height: 1.3em;
+	padding-top: 0px;
+	padding-left: 129px;
+	padding-right: 144px;
+	padding-bottom: 0px;
+}
+.bluetitletext {
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: bold;
+	font-style: normal;
+	color: #00CCFF;
+	line-height: 1.6em;
+}
+.blacktext {
+	font-size: 15px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;
+}
+#corpbodyone-bg {
+	display: inline-block;
+	width: 1050px;
+	height: 575px;	
+	background-image: url(../../images/NorthAmerica/corporate_body1_bg.jpg);
+	background-repeat: no-repeat;
+}
+#corpbodyone-text {
+	width: 777px;
+	height: 575px;
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	line-height: 1.2em;
+	padding-top: 0px;
+	padding-left: 129px;
+	padding-right: 144px;
+	padding-bottom: 0px;
+}
+#corpmainbody-bg {
+	display: inline-block;
+	width: 1050px;
+	height: auto;	
+	background-image: url(../../images/NorthAmerica/corporate_mainbody_bg.jpg);
+	background-repeat: repeat-y;
+}
+#corpmainbody-text {
+	width: 777px;
+	height: auto;
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	line-height: 1.4em;
+	padding-top: 0px;
+	padding-left: 129px;
+	padding-right: 144px;
+	padding-bottom: 10px;
+}
+#contactbodyone-bg {
+	display: inline-block;
+	width: 1050px;
+	height: 106px;	
+	background-image: url(../../images/NorthAmerica/contact_bg1.jpg);
+	background-repeat: no-repeat;
+}
+#contactbodyone-text {
+	width: 744px;
+	height: 106px;
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	line-height: 1.2em;
+	padding-top: 0px;
+	padding-left: 156px;
+	padding-right: 150px;
+	padding-bottom: 0px;
+}
+#contactbodytwo-bg {
+	display: inline-block;
+	width: 1050px;
+	height: 594px;	
+	background-image: url(../../images/NorthAmerica/contact_bg2.jpg);
+	background-repeat: no-repeat;
+}
+#contactbodytwo-text {
+	width: 744px;
+	height: 594px;
+	font-size: 16px;
+	text-transform: normal;
+	font-weight: normal;
+	font-style: normal;
+	color: #FFFFFF;
+	line-height: 1.2em;
+	padding-top: 0px;
+	padding-left: 156px;
+	padding-right: 150px;
+	padding-bottom: 0px;
+}
+/* ========================== Footer Page ==================== */
+#footer {
+	text-align: center;
+	width: 1050px;
+	height: 40px;
+	height: auto;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	text-transform: normal;
+	line-height: 1.2em;
+	color: #FFFFFF;
+	padding-top: 0px;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-bottom: 0px;
+}
+
+div#footer a:link, div#footer a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+div#footer a:hover{
+	text-decoration: underline;
+}
+#ifream_container{
+    width:630px;
+    height:860px;
+    border:1px solid #000; 
+    overflow:hidden;
+    margin:auto;
+}*#ifream_container iframe {
+     width:1000px;
+    height:1400px;
+    margin-left:-10px;
+    margin-top:-215px;   
+    border:0 solid;
+ }
+
+.full.tablerate{
+color:#5f778b;
+float: left;
+width:1050px;
+padding-left: 0;
+display: block;
+
+}
+.greytop.header{
+color:#5f778b;
+
+} 
+
+.tablerate
+{
+
+Width:600px;
+border-spacing:0;
+border-collapse: collapse;
+}
+.tableratecol1
+{
+width: 40%;
+/*padding-left: 1%;*/
+font-family:Georgia;
+font-style:normal;
+font-size:14px;
+color:White;
+}
+.tableratecol1rows
+{
+/*background: #E0E0E0;	*/	
+width: 40%;
+padding-left: 1px;
+font-family:Georgia;
+font-style:italic;
+font-size:12px;
+height:24px;
+color:#5993a2;
+
+
+}
+
+
+.tableraterow1{
+
+padding-left: 1%;
+font-family:Georgia;
+font-style:normal;
+font-size:12px;
+text-align:center;
+}
+.tableraterows{
+
+/*background: #E0E0E0;*/
+color: #7c7c7d;
+
+padding-left: 1%;
+font-family: "Times New Roman", Times, serif;
+font-style:normal;
+font-size:12px;
+text-align:center;
+height:24px;
+
+} 
+
+.tablehighlight{
+/*background: #5993a2;
+background: #5F7384;
+background: #D7D7D7;
+color: Gray;
+*/
+/*background: #5993a2;*/
+color: #fff;
+font-family: Georgia;
+font-size:12px;
+/*font-weight:bold;*/
+/*width: 17%;*/
+text-align:center;
+} 
+.ratesresult{
+	background-image:url(../../images/NorthAmerica/rates_repeater.png);
+	background-repeat:repeat-y;
+}
